@@ -3,7 +3,7 @@
 
 
 def index_range(page, page_size):
-    """eturn a tuple of size two containing a start index and an end index"""
+    """return a tuple of size two containing a start index and an end index"""
     start_index = (page - 1) * page_size
     last_index = page * page_size
 
