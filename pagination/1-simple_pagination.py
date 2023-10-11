@@ -40,4 +40,3 @@ class Server:
         if pagen[0] > len(self.dataset()) or pagen[1] > len(self.dataset()):
             return list()
         return [self.dataset()[i] for i in range(pagen[0], pagen[1])]
-    
