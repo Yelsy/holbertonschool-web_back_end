@@ -43,13 +43,13 @@ class Server:
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
         """return dictionary of hyper"""
-        nextPage = None if page * \
+        next_page = None if page * \
             page_size >= len(self.dataset()) else page + 1
         return {
             'page_size': len(self.get_page(page, page_size)),
             'page': page,
             'data': self.get_page(page, page_size),
-            'nextPage': nextPage,
+            'next_page': next_page,
             'prev_page': None if page == 1 else page - 1,
             'total_pages': math.ceil(len(self.dataset()) / page_size)
         }
