@@ -15,10 +15,10 @@ export default class HolbertonClass {
   set location(value) { this._location = value; }
 
   valueOf() {
-    return this._size
+    return this._size;
   }
 
   toString() {
-    return this._location
+    return this._location;
   }
 }
