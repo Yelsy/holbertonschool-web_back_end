@@ -7,3 +7,5 @@ function handleProfileSignup() {
     })
     .catch(() => console.log('Signup system offline'));
 }
+
+export default handleProfileSignup;
