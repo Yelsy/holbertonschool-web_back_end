@@ -1,5 +1,14 @@
 export default function cleanSet(set, startString) {
-  const filteredSet = new Set([...set].filter((value) => value.startsWith(startString)));
-  const resultString = filteredSet.join('-');
-  return resultString;
+  let result = '';
+  for (const value of set) {
+    if (value.startsWith(startString)) {
+      const suffix = value.substring(startString.length);
+      if (result.length > 0) {
+        result += '-';
+      }
+        result += suffix;
+    }
+  }
+    
+  return result;
 }
