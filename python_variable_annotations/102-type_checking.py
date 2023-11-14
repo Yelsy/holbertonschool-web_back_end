@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-""" More involved type annotations"""
+"""Type checking"""
 from typing import Tuple, List
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """Function that return a tuple"""
-    zoomed_in: List = [
-        item for item in lst
-        for i in range(factor)
-    ]
+    zoomed_in: List[int] = [
+            item for item in lst
+            for i in range(factor)
+            ]
     return zoomed_in
 
-array = [12, 72, 91]
+
+array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
-# The following line will now raise a mypy error
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(array, 3)
